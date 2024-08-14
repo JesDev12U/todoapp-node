@@ -1,0 +1,9 @@
+extends layout 
+block content 
+  a(href="/" class="home-btn") Home
+  h1= title 
+  div.form-task 
+    form(action=`/edit/${task.id}` method="POST")
+      label(for="title") Title 
+      input(type="text" name="title" value=`${task.title}`)
+      input(type="submit" value="Edit task")

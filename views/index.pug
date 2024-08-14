@@ -1,0 +1,15 @@
+extends layout 
+block content
+  h1= title
+  div.tasks-container
+    a(href="/add" id="add-btn") Add task
+    if tasks.length === 0
+      p(id="nothing-to-do") Nothing to Do :D
+    else 
+      each task in tasks 
+        div(class=`task ${task.completed ? "completed" : ""}`)
+          p.title-task #{task.id} #{task.title}
+          a(href=`/edit/${task.id}` class="edit-btn") Edit 
+          a(href=`/complete/${task.id}` class="complete-btn") Complete 
+          a(href=`/uncomplete/${task.id}` class="uncomplete-btn") Uncomplete 
+          a(href=`/delete/${task.id}` class="delete-btn") Delete

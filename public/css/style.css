@@ -1,0 +1,142 @@
+:root {
+  --completed-color: #adadad; 
+  --font-size-btn: 1.2rem;
+  --green: #75ff75;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.tasks-container {
+  background-color: #fafafa;
+  padding: 20px;
+  border: 5px solid #c0c0c0;
+  border-radius: 20px;
+}
+
+#nothing-to-do {
+  margin: 20px;
+  font-size: 3rem;
+}
+
+#add-btn {
+  background-color: #1f58f5ee;
+  text-decoration: none;
+  color: #fff;
+  font-size: var(--font-size-btn);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.task {
+  margin: 10px 0px 20px;
+  font-size: 2rem;
+}
+
+.title-task {
+  margin-bottom: 20px;
+}
+
+.task a {
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: var(--font-size-btn);
+  color: #000;
+}
+
+.edit-btn {
+  background-color: #8fdcff;
+}
+
+.complete-btn {
+  background-color: var(--green);
+}
+
+.uncomplete-btn {
+  background-color: #acacac;
+}
+
+.delete-btn {
+  background-color: #ff5e5e;
+}
+
+.task.completed .title-task {
+  text-decoration: line-through;
+  color: var(--completed-color);
+}
+
+/* .task.completed a {
+  text-decoration: line-through;
+}
+
+.task.completed .edit-btn,
+.task.completed .complete-btn,
+.task.completed .uncomplete-btn,
+.task.completed .delete-btn {
+  background-color: #838383;
+  color: var(--completed-color);
+  cursor:default;
+} */
+
+.form-task {
+  margin: 20px;
+}
+
+.form-task form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form-task form label {
+  font-size: 2rem;
+}
+
+.form-task form > * {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.form-task form input[type="text"] {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.form-task form input[type="submit"] {
+  border-radius: 5px;
+  background-color: var(--green);
+  border-style: none;
+  width: 100px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.home-btn {
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 10px;
+  padding: 5px;
+  background-color: var(--green);
+  display: block;
+  width: 60px;
+  text-align: center;
+  border-radius: 5px;
+  color: #000;
+}
